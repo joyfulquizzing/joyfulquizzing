@@ -1,14 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <!-- ГУГЛ АНАЛИТИКА -->
-    <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-078L9T7WHE"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
 
-      gtag('config', 'G-XXXXXXXXXX');
+      gtag('config', 'G-078L9T7WHE');
     </script>
 
     <meta charset="UTF-8">
@@ -61,18 +60,17 @@
             display: block;
         }
 
-        /* Название бренда по строгим цветам */
         .brand-title {
             font-family: 'Satoshi', sans-serif;
             font-size: 36px;
             font-weight: 900;
             letter-spacing: -0.5px;
             margin-bottom: 12px;
-            color: #ffffff; /* Joyful чисто белый */
+            color: #ffffff;
         }
 
         .brand-title span {
-            color: #6C63FF; /* Quizzing в брендовом фиолетовом */
+            color: #6C63FF;
         }
 
         .bio {
@@ -132,11 +130,9 @@
             margin-bottom: 40px;
         }
 
-        /* Обновленная кнопка с градиентной рамкой и внутренним Glow */
         .link-btn {
             font-family: 'Montserrat', sans-serif;
             width: 100%;
-            background: rgba(13, 16, 37, 0.6);
             color: #ffffff;
             padding: 16px 20px;
             font-size: 15px;
@@ -148,14 +144,12 @@
             align-items: center;
             justify-content: space-between;
             
-            /* Эффект градиентного ободка как на макро-скриншоте */
             border: 1px solid transparent;
-            background-image: linear-gradient(rgba(13, 16, 37, 0.75), rgba(13, 16, 37, 0.75)), 
+            background-image: linear-gradient(rgba(13, 16, 37, 0.6), rgba(13, 16, 37, 0.6)), 
                               linear-gradient(135deg, #6C63FF 0%, #3a32b3 100%);
             background-origin: border-box;
             background-clip: padding-box, border-box;
 
-            /* Внутреннее свечение (inset glow) + внешняя мягкая тень */
             box-shadow: 
                 inset 0 0 12px rgba(108, 99, 255, 0.25),
                 0 4px 15px rgba(0, 0, 0, 0.4);
@@ -171,7 +165,7 @@
         .btn-icon {
             width: 28px;
             height: 28px;
-            margin-right: 20px; /* Увеличили отступ от иконок до букв */
+            margin-right: 20px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
@@ -188,7 +182,6 @@
             color: #ffffff;
         }
 
-        /* Стрелочка цвета бренда */
         .btn-arrow {
             color: #6C63FF;
             font-size: 16px;
@@ -196,9 +189,8 @@
             transition: transform 0.25s ease, color 0.25s ease;
         }
 
-        /* Аккуратный Hover для ПК и мобильный Тап-эффект */
         .link-btn:hover {
-            background-image: linear-gradient(rgba(20, 24, 56, 0.8), rgba(20, 24, 56, 0.8)), 
+            background-image: linear-gradient(rgba(20, 24, 56, 0.65), rgba(20, 24, 56, 0.65)), 
                               linear-gradient(135deg, #827aff 0%, #4c43d9 100%);
             box-shadow: 
                 inset 0 0 16px rgba(108, 99, 255, 0.4),
@@ -207,10 +199,9 @@
 
         .link-btn:hover .btn-arrow {
             transform: translateX(3px);
-            color: #3DD6D0; /* Стрелочка уходит в бирюзовый при наведении */
+            color: #3DD6D0;
         }
 
-        /* Приятный микро-клик на смартфонах */
         .link-btn:active {
             transform: scale(0.99);
             box-shadow: inset 0 0 8px rgba(108, 99, 255, 0.5);
@@ -237,35 +228,30 @@
             color: #6C63FF;
         }
 
-        /* Обновленный подвал по точным цветам */
         footer {
             font-family: 'Montserrat', sans-serif;
             font-size: 14px;
             font-weight: 600;
-            color: #6C63FF; /* Основной брендовый цвет подвала */
+            color: #6C63FF;
             letter-spacing: 0.3px; 
         }
 
         footer .highlight {
-            color: #3DD6D0; /* Точный бирюзовый для Learn. */
+            color: #3DD6D0;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Логотип (только знак JQ) -->
         <div class="profile-logo-container">
             <img src="logo.svg" alt="JQ" class="profile-logo">
         </div>
 
-        <!-- Текстовое название -->
         <h1 class="brand-title">Joyful <span>Quizzing</span></h1>
 
-        <!-- Слоган -->
         <p class="bio">Smart quizzes for curious minds 🧠</p>
 
-        <!-- Блок характеристик -->
         <div class="features-badge">
             <div class="feature-item">
                 <span class="feature-icon"><img src="5p.svg" alt="Platforms"></span>
@@ -278,7 +264,6 @@
             </div>
         </div>
 
-        <!-- Кнопки -->
         <div class="links-wrapper">
             
             <a href="https://www.youtube.com/@joyfulquizzing/shorts" target="_blank" class="link-btn">
@@ -323,14 +308,12 @@
 
         </div>
 
-        <!-- Разделитель -->
         <div class="footer-line-divider">
             <div class="line"></div>
             <span class="diamond">✦</span>
             <div class="line"></div>
         </div>
 
-        <!-- Философия проекта -->
         <footer>
             Explore. <span class="highlight">Learn.</span> Challenge Yourself.
         </footer>
