@@ -150,7 +150,9 @@
             background-origin: border-box;
             background-clip: padding-box, border-box;
 
-            box-shadow: 0 0 12px rgba(124, 77, 255, 0.25);
+            box-shadow: 
+                0 0 14px rgba(124, 77, 255, 0.3),
+                inset 0 0 10px rgba(124, 77, 255, 0.2);
                 
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
@@ -181,21 +183,26 @@
         }
 
         .btn-arrow {
-            color: #7C4DFF;
-            font-size: 16px;
-            font-weight: 500;
-            transition: transform 0.25s ease, color 0.25s ease;
+            width: 8px;
+            height: 8px;
+            border-top: 2px solid #7C4DFF;
+            border-right: 2px solid #7C4DFF;
+            transform: rotate(45deg);
+            transition: transform 0.25s ease, border-color 0.25s ease;
+            margin-right: 4px;
         }
 
         .link-btn:hover {
             background-image: linear-gradient(#0c1d3d, #0c1d3d), 
                               linear-gradient(135deg, #8c61ff 0%, #ac61ff 100%);
-            box-shadow: 0 0 20px rgba(124, 77, 255, 0.45);
+            box-shadow: 
+                0 0 22px rgba(124, 77, 255, 0.5),
+                inset 0 0 14px rgba(124, 77, 255, 0.35);
         }
 
         .link-btn:hover .btn-arrow {
-            transform: translateX(3px);
-            color: #3DD6D0;
+            transform: translate(3px, 0) rotate(45deg);
+            border-color: #3DD6D0;
         }
 
         .link-btn:active {
@@ -266,7 +273,7 @@
                     <span class="btn-icon"><img src="yt.svg" alt="YouTube"></span>
                     <span class="btn-text">Watch on YouTube</span>
                 </div>
-                <span class="btn-arrow">&gt;</span>
+                <span class="btn-arrow"></span>
             </a>
 
             <a href="https://www.tiktok.com/@joyfulquizzing" target="_blank" class="link-btn">
@@ -274,7 +281,7 @@
                     <span class="btn-icon"><img src="tt.svg" alt="TikTok"></span>
                     <span class="btn-text">Watch on TikTok</span>
                 </div>
-                <span class="btn-arrow">&gt;</span>
+                <span class="btn-arrow"></span>
             </a>
             
             <a href="https://www.instagram.com/joyfulquizzing" target="_blank" class="link-btn">
@@ -282,7 +289,7 @@
                     <span class="btn-icon"><img src="ig.svg" alt="Instagram"></span>
                     <span class="btn-text">Follow on Instagram</span>
                 </div>
-                <span class="btn-arrow">&gt;</span>
+                <span class="btn-arrow"></span>
             </a>
             
             <a href="https://www.facebook.com/joyfulquizzing" target="_blank" class="link-btn">
@@ -290,7 +297,7 @@
                     <span class="btn-icon"><img src="fb.svg" alt="Facebook"></span>
                     <span class="btn-text">Find us on Facebook</span>
                 </div>
-                <span class="btn-arrow">&gt;</span>
+                <span class="btn-arrow"></span>
             </a>
             
             <a href="https://www.snapchat.com/add/joyfulquizzing" target="_blank" class="link-btn">
@@ -298,7 +305,7 @@
                     <span class="btn-icon"><img src="sc.svg" alt="Snapchat"></span>
                     <span class="btn-text">Check out Snapchat</span>
                 </div>
-                <span class="btn-arrow">&gt;</span>
+                <span class="btn-arrow"></span>
             </a>
 
         </div>
