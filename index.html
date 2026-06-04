@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <!-- ГУГЛ АНАЛИТИКА -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-XXXXXXXXXX"></script>
     <script>
       window.dataLayer = window.dataLayer || [];
@@ -27,7 +28,6 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            /* Сложный градиент, имитирующий свечение сбоку как на дизайне */
             background: 
                 radial-gradient(circle at 90% 50%, rgba(0, 242, 254, 0.15) 0%, transparent 40%),
                 radial-gradient(circle at 10% 10%, rgba(90, 84, 255, 0.12) 0%, transparent 50%),
@@ -48,12 +48,11 @@
             padding: 50px 24px;
         }
 
-        /* Только иконка JQ без текста */
         .profile-logo-container {
             width: 90px; 
             height: 90px;
             margin-bottom: 20px;
-            filter: drop-shadow(0px 10px 25px rgba(90, 84, 255, 0.5));
+            filter: drop-shadow(0px 10px 25px rgba(108, 99, 255, 0.5));
         }
 
         .profile-logo {
@@ -62,19 +61,18 @@
             display: block;
         }
 
-        /* Текстовое название шрифтом Satoshi */
+        /* Название бренда по строгим цветам */
         .brand-title {
             font-family: 'Satoshi', sans-serif;
             font-size: 36px;
             font-weight: 900;
             letter-spacing: -0.5px;
             margin-bottom: 12px;
+            color: #ffffff; /* Joyful чисто белый */
         }
 
         .brand-title span {
-            background: linear-gradient(90deg, #7F7BFF, #A29FFF);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+            color: #6C63FF; /* Quizzing в брендовом фиолетовом */
         }
 
         .bio {
@@ -85,7 +83,6 @@
             font-weight: 500; 
         }
 
-        /* Блок характеристик проекта (5 Platforms | New Quizzes Daily) */
         .features-badge {
             font-family: 'Montserrat', sans-serif;
             display: flex;
@@ -127,7 +124,6 @@
             background: rgba(255, 255, 255, 0.15);
         }
 
-        /* Список кнопок */
         .links-wrapper {
             width: 100%;
             display: flex;
@@ -136,7 +132,7 @@
             margin-bottom: 40px;
         }
 
-        /* Стиль кнопок из дизайна (Стекломорфизм + Тонкий контур) */
+        /* Обновленная кнопка с градиентной рамкой и внутренним Glow */
         .link-btn {
             font-family: 'Montserrat', sans-serif;
             width: 100%;
@@ -146,13 +142,25 @@
             font-size: 15px;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 14px; 
-            transition: all 0.3s cubic-bezier(0.25, 0.8, 0.25, 1);
+            border-radius: 16px; 
+            position: relative;
             display: flex;
             align-items: center;
             justify-content: space-between;
-            border: 1px solid rgba(90, 84, 255, 0.35);
-            box-shadow: inset 0 1px 1px rgba(255, 255, 255, 0.1);
+            
+            /* Эффект градиентного ободка как на макро-скриншоте */
+            border: 1px solid transparent;
+            background-image: linear-gradient(rgba(13, 16, 37, 0.75), rgba(13, 16, 37, 0.75)), 
+                              linear-gradient(135deg, #6C63FF 0%, #3a32b3 100%);
+            background-origin: border-box;
+            background-clip: padding-box, border-box;
+
+            /* Внутреннее свечение (inset glow) + внешняя мягкая тень */
+            box-shadow: 
+                inset 0 0 12px rgba(108, 99, 255, 0.25),
+                0 4px 15px rgba(0, 0, 0, 0.4);
+                
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
         }
 
         .btn-left {
@@ -163,7 +171,7 @@
         .btn-icon {
             width: 28px;
             height: 28px;
-            margin-right: 14px;
+            margin-right: 20px; /* Увеличили отступ от иконок до букв */
             flex-shrink: 0;
             display: flex;
             align-items: center;
@@ -177,31 +185,37 @@
         }
 
         .btn-text {
-            color: #f0f2f8;
+            color: #ffffff;
         }
 
-        /* Стрелочка вправо как на дизайне */
+        /* Стрелочка цвета бренда */
         .btn-arrow {
-            color: rgba(90, 84, 255, 0.8);
+            color: #6C63FF;
             font-size: 16px;
-            font-weight: 400;
-            transition: transform 0.3s ease;
+            font-weight: 500;
+            transition: transform 0.25s ease, color 0.25s ease;
         }
 
-        /* Эффект наведения как на дизайне */
+        /* Аккуратный Hover для ПК и мобильный Тап-эффект */
         .link-btn:hover {
-            transform: translateY(-1px);
-            background: rgba(20, 24, 56, 0.8);
-            border-color: #5A54FF; 
-            box-shadow: 0 0 20px rgba(90, 84, 255, 0.35);
+            background-image: linear-gradient(rgba(20, 24, 56, 0.8), rgba(20, 24, 56, 0.8)), 
+                              linear-gradient(135deg, #827aff 0%, #4c43d9 100%);
+            box-shadow: 
+                inset 0 0 16px rgba(108, 99, 255, 0.4),
+                0 0 25px rgba(108, 99, 255, 0.3);
         }
 
         .link-btn:hover .btn-arrow {
             transform: translateX(3px);
-            color: #00F2FE;
+            color: #3DD6D0; /* Стрелочка уходит в бирюзовый при наведении */
         }
 
-        /* Декоративный разделитель перед подвалом */
+        /* Приятный микро-клик на смартфонах */
+        .link-btn:active {
+            transform: scale(0.99);
+            box-shadow: inset 0 0 8px rgba(108, 99, 255, 0.5);
+        }
+
         .footer-line-divider {
             width: 100%;
             display: flex;
@@ -209,45 +223,49 @@
             justify-content: center;
             gap: 15px;
             margin-bottom: 25px;
-            opacity: 0.3;
+            opacity: 0.2;
         }
 
         .line {
             height: 1px;
             flex-grow: 1;
-            background: linear-gradient(90deg, transparent, #ffffff, transparent);
+            background: linear-gradient(90deg, transparent, #6C63FF, transparent);
         }
 
         .diamond {
             font-size: 10px;
-            color: #ffffff;
+            color: #6C63FF;
         }
 
-        /* Новый подвал-философия */
+        /* Обновленный подвал по точным цветам */
         footer {
             font-family: 'Montserrat', sans-serif;
-            font-size: 13px;
+            font-size: 14px;
             font-weight: 600;
-            color: #6C7493; 
-            letter-spacing: 0.5px; 
+            color: #6C63FF; /* Основной брендовый цвет подвала */
+            letter-spacing: 0.3px; 
         }
 
         footer .highlight {
-            color: #00F2FE; /* Фирменный бирюзовый */
+            color: #3DD6D0; /* Точный бирюзовый для Learn. */
         }
     </style>
 </head>
 <body>
 
     <div class="container">
+        <!-- Логотип (только знак JQ) -->
         <div class="profile-logo-container">
             <img src="logo.svg" alt="JQ" class="profile-logo">
         </div>
 
+        <!-- Текстовое название -->
         <h1 class="brand-title">Joyful <span>Quizzing</span></h1>
 
+        <!-- Слоган -->
         <p class="bio">Smart quizzes for curious minds 🧠</p>
 
+        <!-- Блок характеристик -->
         <div class="features-badge">
             <div class="feature-item">
                 <span class="feature-icon"><img src="5p.svg" alt="Platforms"></span>
@@ -260,6 +278,7 @@
             </div>
         </div>
 
+        <!-- Кнопки -->
         <div class="links-wrapper">
             
             <a href="https://www.youtube.com/@joyfulquizzing/shorts" target="_blank" class="link-btn">
@@ -304,12 +323,14 @@
 
         </div>
 
+        <!-- Разделитель -->
         <div class="footer-line-divider">
             <div class="line"></div>
             <span class="diamond">✦</span>
             <div class="line"></div>
         </div>
 
+        <!-- Философия проекта -->
         <footer>
             Explore. <span class="highlight">Learn.</span> Challenge Yourself.
         </footer>
