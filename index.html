@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Joyful Quizzing - Links</title>
     <style>
+        /* @import скачивает красивый шрифт Montserrat */
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap');
+
         /* Обнуляем отступы */
         * {
             box-sizing: border-box;
@@ -13,12 +16,13 @@
             font-family: 'Montserrat', 'Segoe UI', sans-serif;
         }
 
-        /* Настраиваем фон всего сайта (на базе твоего баннера) */
+        /* Настраиваем фон всего сайта (ваш оригинальный фон с картой мира) */
         body {
+            margin: 0;
+            padding: 0;
+            min-height: 100vh;
             background-color: #050814;
-            /* Наш фирменный темный фон с временной картой мира на заднем плане */
-            background-image: radial-gradient(circle at center, rgba(11, 16, 41, 0.6) 0%, #050814 100%), 
-                              url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop');
+            background-image: url('image_16.png'); 
             background-size: cover;
             background-position: center;
             background-attachment: fixed;
@@ -26,8 +30,19 @@
             display: flex;
             justify-content: center;
             align-items: flex-start;
-            min-height: 100vh;
-            padding: 40px 20px;
+            position: relative;
+        }
+
+        /* Полупрозрачная маска поверх фона для читаемости */
+        body::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background-color: rgba(5, 8, 20, 0.7);
+            z-index: 1;
         }
 
         /* Ограничиваем контейнер под мобильный экран */
@@ -38,40 +53,35 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            position: relative;
+            z-index: 2;
+            padding: 50px 20px;
         }
 
-        /* Стили контейнера для твоего векторного логотипа */
+        /* Увеличенный контейнер для логотипа (теперь он во всю ширину контента) */
         .profile-logo-container {
-            width: 110px;
-            height: 110px;
-            margin-bottom: 20px;
-            /* Мягкое неоновое свечение вокруг твоего лого в тон плашки */
-            filter: drop-shadow(0px 8px 20px rgba(90, 84, 255, 0.45));
+            width: 85%; /* Увеличили, чтобы края были практически на уровне кнопок */
+            max-width: 320px;
+            margin-bottom: 25px;
+            /* Мягкое неоновое свечение вокруг твоего лого */
+            filter: drop-shadow(0px 10px 25px rgba(90, 84, 255, 0.5));
         }
 
         /* Сама картинка логотипа */
         .profile-logo {
             width: 100%;
-            height: 100%;
-            object-fit: contain;
+            height: auto;
+            display: block;
         }
 
-        /* Заголовок (Joyful Quizzing) */
-        h1 {
-            font-size: 28px;
-            font-weight: 700;
-            margin-bottom: 8px;
-            letter-spacing: -0.5px;
-            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
-        }
-
-        /* Описание */
+        /* Новый обновленный слоган */
         .bio {
-            font-size: 15px;
-            color: #b0b5c9;
-            margin-bottom: 35px;
+            font-size: 16px;
+            color: #e2e5f0;
+            margin-bottom: 40px;
             line-height: 1.5;
-            font-weight: 400;
+            font-weight: 600; /* Сделали чуть жирнее и отчетливее */
+            text-shadow: 0 2px 8px rgba(0, 0, 0, 0.6);
         }
 
         /* Блок с кнопками-ссылками */
@@ -79,23 +89,23 @@
             width: 100%;
             display: flex;
             flex-direction: column;
-            gap: 16px; /* Расстояние между кнопками */
+            gap: 18px; /* Чуть увеличили расстояние для воздушности */
         }
 
         /* Фирменный стиль твоих кнопок */
         .link-btn {
             width: 100%;
-            background: #5A54FF; /* Базовый фиолетовый из твоего логотипа */
+            background: #5A54FF;
             color: #ffffff;
             padding: 18px 24px;
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 18px; /* Повторяет форму плашки твоего лого */
+            border-radius: 20px; /* Идеальное скругление как на твоем скришоте */
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
-            justify-content: flex-start; /* Выравнивание по левому краю для баланса с иконкой */
+            justify-content: flex-start;
             border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
         }
@@ -104,7 +114,7 @@
         .btn-icon {
             width: 24px;
             height: 24px;
-            margin-right: 16px; /* Отступ от иконки до текста */
+            margin-right: 16px;
             flex-shrink: 0;
             display: flex;
             align-items: center;
@@ -118,43 +128,46 @@
             object-fit: contain;
         }
 
-        /* Текст внутри кнопки центрируем относительно оставшегося места */
+        /* Текст внутри кнопки */
         .btn-text {
             flex-grow: 1;
             text-align: center;
-            margin-right: 24px; /* Компенсируем ширину иконки для идеального центра */
+            margin-right: 24px; /* Идеальная центровка */
         }
 
         /* Эффект при наведении/нажатии на кнопку */
         .link-btn:hover {
             transform: translateY(-2px) scale(1.02);
-            background: #6B66FF; /* Чуть ярче при наведении */
-            /* Неоновое бирюзовое свечение (в цвет точек на твоей карте) */
-            box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+            background: #6B66FF;
+            box-shadow: 0 0 25px rgba(0, 242, 254, 0.6);
             border-color: #00F2FE; 
         }
 
-        /* Подвал */
+        /* Обновленный информационный подвал */
         footer {
-            margin-top: 50px;
-            font-size: 12px;
-            color: #525875;
+            margin-top: 60px;
+            font-size: 13px;
+            font-weight: 600;
+            color: #6C7493; /* Приятный приглушенный цвет */
+            letter-spacing: 1px; /* Красивый отступ между буквами */
+            text-transform: uppercase; /* Все буквы заглавные для стиля */
+            position: relative;
+            z-index: 2;
         }
     </style>
 </head>
 <body>
 
     <div class="container">
-        <!-- Блок твоего логотипа -->
+        <!-- Блок твоего увеличенного логотипа -->
         <div class="profile-logo-container">
-            <img src="logo.svg" alt="Joyful Quizzing Logo" class="profile-logo">
+            <img src="logo.svg" alt="Joyful Quizzing" class="profile-logo">
         </div>
 
-        <!-- Название проекта -->
-        <h1>Joyful Quizzing</h1>
-        <p class="bio">Test your brain with daily fun quizzes! 🧠✨<br>Choose your favorite platform below:</p>
+        <!-- Новый слоган -->
+        <p class="bio">Smart quizzes for curious minds 🧠</p>
 
-        <!-- Кнопки соцсетей (Вместо знака # вставляй свои ссылки) -->
+        <!-- Кнопки соцсетей -->
         <div class="links-wrapper">
             
             <!-- Facebook -->
@@ -183,8 +196,9 @@
 
         </div>
 
+        <!-- Обновленный текст подвала -->
         <footer>
-            © 2026 Joyful Quizzing. All rights reserved.
+            Geography • History • More Coming Soon
         </footer>
     </div>
 
