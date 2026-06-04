@@ -27,10 +27,7 @@
             margin: 0;
             padding: 0;
             min-height: 100vh;
-            background: 
-                radial-gradient(circle at 90% 50%, rgba(0, 242, 254, 0.15) 0%, transparent 40%),
-                radial-gradient(circle at 10% 10%, rgba(90, 84, 255, 0.12) 0%, transparent 50%),
-                linear-gradient(180deg, #070913 0%, #03050c 50%, #010205 100%);
+            background: radial-gradient(circle at top left, #22105B 0%, #08122C 35%, #03091A 100%);
             color: #ffffff;
             display: flex;
             justify-content: center;
@@ -51,7 +48,7 @@
             width: 90px; 
             height: 90px;
             margin-bottom: 20px;
-            filter: drop-shadow(0px 10px 25px rgba(108, 99, 255, 0.5));
+            filter: drop-shadow(0px 0px 30px rgba(124, 77, 255, 0.8));
         }
 
         .profile-logo {
@@ -76,7 +73,7 @@
         .bio {
             font-family: 'Montserrat', sans-serif;
             font-size: 16px; 
-            color: #bcbfc8;
+            color: #ffffff;
             margin-bottom: 25px;
             font-weight: 500; 
         }
@@ -100,7 +97,7 @@
             gap: 8px;
             font-size: 13px;
             font-weight: 600;
-            color: #e2e5f0;
+            color: #ffffff;
         }
 
         .feature-icon {
@@ -108,12 +105,23 @@
             height: 18px;
             display: flex;
             align-items: center;
+            background: linear-gradient(90deg, #7C4DFF, #9C4DFF);
+            -webkit-mask-repeat: no-repeat;
+            mask-repeat: no-repeat;
+            -webkit-mask-size: contain;
+            mask-size: contain;
+            -webkit-mask-position: center;
+            mask-position: center;
         }
 
-        .feature-icon img {
-            width: 100%;
-            height: 100%;
-            object-fit: contain;
+        .feature-icon-1 {
+            -webkit-mask-image: url('5p.svg');
+            mask-image: url('5p.svg');
+        }
+
+        .feature-icon-2 {
+            -webkit-mask-image: url('nqd.svg');
+            mask-image: url('nqd.svg');
         }
 
         .divider {
@@ -146,7 +154,7 @@
             
             border: 1px solid transparent;
             background-image: linear-gradient(#07142D, #07142D), 
-                              linear-gradient(135deg, #7C4DFF 0%, #9C4DFF 100%);
+                              linear-gradient(90deg, #7C4DFF, #9C4DFF);
             background-origin: border-box;
             background-clip: padding-box, border-box;
 
@@ -192,7 +200,7 @@
 
         .link-btn:hover {
             background-image: linear-gradient(#0c1d3d, #0c1d3d), 
-                              linear-gradient(135deg, #8c61ff 0%, #ac61ff 100%);
+                              linear-gradient(90deg, #8c61ff, #ac61ff);
             box-shadow: inset 0 0 14px rgba(124, 77, 255, 0.4);
         }
 
@@ -252,12 +260,12 @@
 
         <div class="features-badge">
             <div class="feature-item">
-                <span class="feature-icon"><img src="5p.svg" alt="Platforms"></span>
+                <span class="feature-icon feature-icon-1"></span>
                 <span>5 Platforms</span>
             </div>
             <div class="divider"></div>
             <div class="feature-item">
-                <span class="feature-icon"><img src="nqd.svg" alt="Daily"></span>
+                <span class="feature-icon feature-icon-2"></span>
                 <span>New Quizzes Daily</span>
             </div>
         </div>
