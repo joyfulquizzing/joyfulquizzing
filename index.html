@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Joyful Quizzing - Links</title>
+    <style>
+        /* Обнуляем отступы */
+        * {
+            box-sizing: border-box;
+            margin: 0;
+            padding: 0;
+            font-family: 'Montserrat', 'Segoe UI', sans-serif;
+        }
+
+        /* Настраиваем фон всего сайта (на базе твоего баннера) */
+        body {
+            background-color: #050814;
+            /* Временный фон в стиле твоей карты мира */
+            background-image: radial-gradient(circle at center, rgba(11, 16, 41, 0.6) 0%, #050814 100%), 
+                              url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop');
+            background-size: cover;
+            background-position: center;
+            background-attachment: fixed;
+            color: #ffffff;
+            display: flex;
+            justify-content: center;
+            align-items: flex-start;
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+
+        /* Ограничиваем контейнер под мобильный экран */
+        .container {
+            width: 100%;
+            max-width: 430px;
+            text-align: center;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        /* Стили аватара (логотип JQ) */
+        .profile-img {
+            width: 110px;
+            height: 110px;
+            background: #5A54FF; /* Твой фиолетовый цвет */
+            border-radius: 28px; /* Скругление как на лого */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 42px;
+            font-weight: 800;
+            box-shadow: 0 8px 24px rgba(90, 84, 255, 0.4);
+            margin-bottom: 20px;
+            color: #fff;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+        }
+
+        /* Заголовок (Joyful Quizzing) */
+        h1 {
+            font-size: 28px;
+            font-weight: 700;
+            margin-bottom: 8px;
+            letter-spacing: -0.5px;
+            text-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+        }
+
+        /* Описание */
+        .bio {
+            font-size: 15px;
+            color: #b0b5c9;
+            margin-bottom: 35px;
+            line-height: 1.5;
+            font-weight: 400;
+        }
+
+        /* Блок с кнопками-ссылками */
+        .links-wrapper {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            gap: 16px; /* Расстояние между кнопками */
+        }
+
+        /* Фирменный стиль твоих кнопок */
+        .link-btn {
+            width: 100%;
+            background: #5A54FF; /* Базовый фиолетовый из лого */
+            color: #ffffff;
+            padding: 18px 24px;
+            font-size: 16px;
+            font-weight: 600;
+            text-decoration: none;
+            border-radius: 18px; /* Повторяет форму плашки лого */
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Эффект при наведении/нажатии на кнопку */
+        .link-btn:hover {
+            transform: translateY(-2px) scale(1.02);
+            background: #6B66FF; /* Чуть ярче при наведении */
+            /* Неоновое бирюзовое свечение (в цвет точек на твоей карте) */
+            box-shadow: 0 0 20px rgba(0, 242, 254, 0.6);
+            border-color: #00F2FE; 
+        }
+
+        /* Подвал */
+        footer {
+            margin-top: 50px;
+            font-size: 12px;
+            color: #525875;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <!-- Аватарка (Имитация твоего логотипа image_15.png) -->
+        <div class="profile-img">JQ</div>
+
+        <!-- Название проекта -->
+        <h1>Joyful Quizzing</h1>
+        <p class="bio">Test your brain with daily fun quizzes! 🧠✨<br>Choose your favorite platform below:</p>
+
+        <!-- Кнопки соцсетей -->
+        <div class="links-wrapper">
+            <a href="#" class="link-btn">🔴 Watch on YouTube Shorts</a>
+            <a href="#" class="link-btn">🎵 Follow on TikTok</a>
+            <a href="#" class="link-btn">👻 Check out Snapchat Spotlight</a>
+        </div>
+
+        <footer>
+            © 2026 Joyful Quizzing. All rights reserved.
+        </footer>
+    </div>
+
+</body>
+</html>
