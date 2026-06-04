@@ -16,7 +16,7 @@
         /* Настраиваем фон всего сайта (на базе твоего баннера) */
         body {
             background-color: #050814;
-            /* Временный фон в стиле твоей карты мира */
+            /* Наш фирменный темный фон с временной картой мира на заднем плане */
             background-image: radial-gradient(circle at center, rgba(11, 16, 41, 0.6) 0%, #050814 100%), 
                               url('https://images.unsplash.com/photo-1618005182384-a83a8bd57fbe?q=80&w=1000&auto=format&fit=crop');
             background-size: cover;
@@ -40,21 +40,20 @@
             align-items: center;
         }
 
-        /* Стили аватара (логотип JQ) */
-        .profile-img {
+        /* Стили контейнера для твоего векторного логотипа */
+        .profile-logo-container {
             width: 110px;
             height: 110px;
-            background: #5A54FF; /* Твой фиолетовый цвет */
-            border-radius: 28px; /* Скругление как на лого */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            font-size: 42px;
-            font-weight: 800;
-            box-shadow: 0 8px 24px rgba(90, 84, 255, 0.4);
             margin-bottom: 20px;
-            color: #fff;
-            border: 2px solid rgba(255, 255, 255, 0.1);
+            /* Мягкое неоновое свечение вокруг твоего лого в тон плашки */
+            filter: drop-shadow(0px 8px 20px rgba(90, 84, 255, 0.45));
+        }
+
+        /* Сама картинка логотипа */
+        .profile-logo {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
         }
 
         /* Заголовок (Joyful Quizzing) */
@@ -86,19 +85,44 @@
         /* Фирменный стиль твоих кнопок */
         .link-btn {
             width: 100%;
-            background: #5A54FF; /* Базовый фиолетовый из лого */
+            background: #5A54FF; /* Базовый фиолетовый из твоего логотипа */
             color: #ffffff;
             padding: 18px 24px;
             font-size: 16px;
             font-weight: 600;
             text-decoration: none;
-            border-radius: 18px; /* Повторяет форму плашки лого */
+            border-radius: 18px; /* Повторяет форму плашки твоего лого */
             transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
             display: flex;
             align-items: center;
-            justify-content: center;
+            justify-content: flex-start; /* Выравнивание по левому краю для баланса с иконкой */
             border: 1px solid rgba(255, 255, 255, 0.15);
             box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Контейнер для иконки внутри кнопки */
+        .btn-icon {
+            width: 24px;
+            height: 24px;
+            margin-right: 16px; /* Отступ от иконки до текста */
+            flex-shrink: 0;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        /* Стили самих SVG иконок */
+        .btn-icon img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        /* Текст внутри кнопки центрируем относительно оставшегося места */
+        .btn-text {
+            flex-grow: 1;
+            text-align: center;
+            margin-right: 24px; /* Компенсируем ширину иконки для идеального центра */
         }
 
         /* Эффект при наведении/нажатии на кнопку */
@@ -121,18 +145,42 @@
 <body>
 
     <div class="container">
-        <!-- Аватарка (Имитация твоего логотипа image_15.png) -->
-        <div class="profile-img">JQ</div>
+        <!-- Блок твоего логотипа -->
+        <div class="profile-logo-container">
+            <img src="logo.svg" alt="Joyful Quizzing Logo" class="profile-logo">
+        </div>
 
         <!-- Название проекта -->
         <h1>Joyful Quizzing</h1>
         <p class="bio">Test your brain with daily fun quizzes! 🧠✨<br>Choose your favorite platform below:</p>
 
-        <!-- Кнопки соцсетей -->
+        <!-- Кнопки соцсетей (Вместо знака # вставляй свои ссылки) -->
         <div class="links-wrapper">
-            <a href="#" class="link-btn">🔴 Watch on YouTube Shorts</a>
-            <a href="#" class="link-btn">🎵 Follow on TikTok</a>
-            <a href="#" class="link-btn">👻 Check out Snapchat Spotlight</a>
+            
+            <!-- Facebook -->
+            <a href="#" target="_blank" class="link-btn">
+                <span class="btn-icon"><img src="fb.svg" alt="Facebook"></span>
+                <span class="btn-text">Find us on Facebook</span>
+            </a>
+            
+            <!-- Instagram -->
+            <a href="#" target="_blank" class="link-btn">
+                <span class="btn-icon"><img src="ig.svg" alt="Instagram"></span>
+                <span class="btn-text">Follow on Instagram</span>
+            </a>
+            
+            <!-- TikTok -->
+            <a href="#" target="_blank" class="link-btn">
+                <span class="btn-icon"><img src="tt.svg" alt="TikTok"></span>
+                <span class="btn-text">Watch on TikTok</span>
+            </a>
+            
+            <!-- Snapchat -->
+            <a href="#" target="_blank" class="link-btn">
+                <span class="btn-icon"><img src="sc.svg" alt="Snapchat"></span>
+                <span class="btn-text">Check out Snapchat</span>
+            </a>
+
         </div>
 
         <footer>
