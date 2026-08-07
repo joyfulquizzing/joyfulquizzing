@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kontakt - Joyful Quizzing</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap');
+        @import url('https://api.fontshare.com/v2/css?f[]=satoshi@700,900,600,500&display=swap');
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            margin: 0; padding: 0; min-height: 100vh;
+            background: radial-gradient(circle at top left, #22105B 0%, #08122C 35%, #03091A 100%);
+            color: #ffffff; display: flex; justify-content: center; align-items: flex-start;
+        }
+
+        .container {
+            width: 100%; max-width: 430px; text-align: center;
+            display: flex; flex-direction: column; align-items: center; padding: 50px 24px;
+        }
+
+        .brand-title {
+            font-family: 'Satoshi', sans-serif; font-size: 32px; font-weight: 900;
+            letter-spacing: -0.5px; margin-bottom: 25px; color: #ffffff;
+        }
+
+        .brand-title span { color: #6C63FF; }
+
+        .text-content {
+            font-family: 'Montserrat', sans-serif; font-size: 15px; line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85); background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px;
+            padding: 24px; text-align: center; margin-bottom: 30px; width: 100%; font-weight: 500;
+        }
+        
+        .text-content p { margin-bottom: 15px; }
+        .text-content p:last-child { margin-bottom: 0; }
+
+        .link-btn {
+            font-family: 'Montserrat', sans-serif; width: 100%; color: #ffffff;
+            padding: 16px 20px; font-size: 15px; font-weight: 600; text-decoration: none;
+            border-radius: 16px; display: flex; align-items: center; justify-content: space-between;
+            border: 1px solid transparent;
+            background-image: linear-gradient(#07142D, #07142D), linear-gradient(90deg, #7C4DFF, #9C4DFF);
+            background-origin: border-box; background-clip: padding-box, border-box;
+            box-shadow: inset 0 0 10px rgba(124, 77, 255, 0.25);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1); margin-bottom: 14px;
+        }
+
+        .btn-left { display: flex; align-items: center; }
+
+        .btn-arrow {
+            width: 8px; height: 8px; border-top: 2px solid #7C4DFF; border-right: 2px solid #7C4DFF;
+            transform: rotate(45deg); transition: transform 0.25s ease, border-color 0.25s ease;
+            margin-right: 4px;
+        }
+
+        .link-btn:hover {
+            background-image: linear-gradient(#0c1d3d, #0c1d3d), linear-gradient(90deg, #8c61ff, #ac61ff);
+            box-shadow: inset 0 0 14px rgba(124, 77, 255, 0.4);
+        }
+
+        .link-btn:hover .btn-arrow { transform: translate(3px, 0) rotate(45deg); border-color: #3DD6D0; }
+        .link-btn:active { transform: scale(0.99); }
+
+        .btn-secondary {
+            justify-content: center;
+            background-image: linear-gradient(#07142D, #07142D), linear-gradient(90deg, rgba(255,255,255,0.2), rgba(255,255,255,0.2));
+            box-shadow: none; margin-top: 10px;
+        }
+        
+        .btn-secondary:hover {
+            background-image: linear-gradient(#0c1d3d, #0c1d3d), linear-gradient(90deg, rgba(255,255,255,0.4), rgba(255,255,255,0.4));
+            box-shadow: none;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="brand-title"><span>Kontakt</span></h1>
+
+        <div class="text-content">
+            <p>Haben Sie Fragen, Feedback oder geschäftliche Anfragen? Schreiben Sie mir gerne eine E-Mail!</p>
+            <p>Ich bemühe mich, Ihre Nachricht so schnell wie möglich zu beantworten.</p>
+        </div>
+
+        <a href="mailto:joyfulquizzing@gmail.com" class="link-btn">
+            <div class="btn-left">
+                <span class="btn-text">E-Mail schreiben</span>
+            </div>
+            <span class="btn-arrow"></span>
+        </a>
+
+        <a href="index.html" class="link-btn btn-secondary">
+            Zurück zur Übersicht
+        </a>
+    </div>
+
+</body>
+</html>
