@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Datenschutz - Joyful Quizzing</title>
+    <style>
+        /* --- Локальная загрузка шрифтов --- */
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 400;
+            src: url('montserrat-v31-latin-regular.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 500;
+            src: url('montserrat-v31-latin-500.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 600;
+            src: url('montserrat-v31-latin-600.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Montserrat';
+            font-style: normal;
+            font-weight: 700;
+            src: url('montserrat-v31-latin-700.woff2') format('woff2');
+        }
+
+        @font-face {
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 500;
+            src: url('satoshi-500.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 700;
+            src: url('satoshi-700.woff2') format('woff2');
+        }
+        @font-face {
+            font-family: 'Satoshi';
+            font-style: normal;
+            font-weight: 900;
+            src: url('satoshi-900.woff2') format('woff2');
+        }
+
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+
+        body {
+            margin: 0; padding: 0; min-height: 100vh;
+            background: radial-gradient(circle at top left, #22105B 0%, #08122C 35%, #03091A 100%);
+            color: #ffffff; display: flex; justify-content: center; align-items: flex-start;
+        }
+
+        .container {
+            width: 100%; max-width: 430px; text-align: center;
+            display: flex; flex-direction: column; align-items: center; padding: 50px 24px 60px 24px;
+        }
+
+        .brand-title {
+            font-family: 'Satoshi', sans-serif; font-size: 32px; font-weight: 900;
+            letter-spacing: -0.5px; margin-bottom: 25px; color: #ffffff;
+        }
+
+        .brand-title span { color: #6C63FF; }
+
+        .text-content {
+            font-family: 'Montserrat', sans-serif; font-size: 13px; line-height: 1.6;
+            color: rgba(255, 255, 255, 0.85); background: rgba(255, 255, 255, 0.03);
+            border: 1px solid rgba(255, 255, 255, 0.05); border-radius: 20px;
+            padding: 24px; text-align: left; margin-bottom: 30px; width: 100%; font-weight: 500;
+        }
+
+        .text-content h2 {
+            font-family: 'Satoshi', sans-serif; font-size: 18px; color: #6C63FF;
+            margin-top: 20px; margin-bottom: 10px; border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            padding-bottom: 6px;
+        }
+
+        .text-content h2:first-child { margin-top: 0; }
+
+        .text-content h3 { font-size: 14px; color: #3DD6D0; margin-top: 14px; margin-bottom: 4px; }
+        .text-content p { margin-bottom: 10px; }
+        .text-content ul { margin-left: 18px; margin-bottom: 10px; }
+        .text-content li { margin-bottom: 4px; }
+
+        .link-btn {
+            font-family: 'Montserrat', sans-serif; width: 100%; color: #ffffff;
+            padding: 16px 20px; font-size: 15px; font-weight: 600; text-decoration: none;
+            border-radius: 16px; display: flex; align-items: center; justify-content: center;
+            border: 1px solid transparent;
+            background-image: linear-gradient(#07142D, #07142D), linear-gradient(90deg, #7C4DFF, #9C4DFF);
+            background-origin: border-box; background-clip: padding-box, border-box;
+            box-shadow: inset 0 0 10px rgba(124, 77, 255, 0.25);
+            transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+
+        .link-btn:hover {
+            background-image: linear-gradient(#0c1d3d, #0c1d3d), linear-gradient(90deg, #8c61ff, #ac61ff);
+            box-shadow: inset 0 0 14px rgba(124, 77, 255, 0.4);
+        }
+
+        .link-btn:active { transform: scale(0.99); }
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h1 class="brand-title"><span>Datenschutz</span></h1>
+
+        <div class="text-content">
+            <h2>1. Datenschutz auf einen Blick</h2>
+            <h3>Allgemeine Hinweise</h3>
+            <p>Die folgenden Hinweise geben einen einfachen Überblick darüber, was mit Ihren personenbezogenen Daten passiert, wenn Sie diese Website besuchen. Personenbezogene Daten sind alle Daten, mit denen Sie persönlich identifiziert werden können.</p>
+
+            <h2>2. Hosting</h2>
+            <p>Wir hosten die Inhalte unserer Website bei einem externen Anbieter (Hosting-Provider). Die personenbezogenen Daten, die auf dieser Website erfasst werden, werden auf den Servern des Hosters gespeichert.</p>
+
+            <h2>3. Verantwortliche Stelle</h2>
+            <p>Die verantwortliche Stelle für die Datenverarbeitung auf dieser Website ist:</p>
+            <p>
+                Roman Ovcharenko<br>
+                Raiffeisenstr. 21<br>
+                93354 Biburg<br>
+                E-Mail: joyfulquizzing@gmail.com
+            </p>
+
+            <h2>4. Datenerfassung auf dieser Website</h2>
+            <h3>Cookies</h3>
+            <p>Unsere Website verwendet sogenannte „Cookies“. Cookies sind kleine Datenpakete, die auf Ihrem Endgerät gespeichert werden. Sie richten keinen Schaden an. Sie werden entweder vorübergehend für die Dauer einer Sitzung (Session-Cookies) oder dauerhaft (permanente Cookies) auf Ihrem Endgerät gespeichert.</p>
+            <p>Sie können Ihren Browser so einstellen, dass Sie über das Setzen von Cookies informiert werden und Cookies nur im Einzelfall erlauben, die Annahme von Cookies für bestimmte Fälle oder generell ausschließen sowie das automatische Löschen der Cookies beim Schließen des Browsers aktivieren.</p>
+
+            <h3>Google Analytics</h3>
+            <p>Soweit Sie Ihre Einwilligung erteilt haben, wird auf dieser Website Google Analytics eingesetzt, ein Webanalysedienst der Google Ireland Limited („Google“). Google Analytics verwendet Cookies, die eine Analyse der Benutzung der Website durch Sie ermöglichen.</p>
+            <p>Die Nutzung von Google Analytics erfolgt nur nach Ihrer ausdrücklichen Einwilligung über unseren Cookie-Banner (Art. 6 Abs. 1 lit. a DSGVO). Sie können Ihre Einwilligung jederzeit widerrufen, indem Sie die Cookies in Ihrem Browser löschen oder Ihre Einstellungen anpassen.</p>
+        </div>
+
+        <a href="index.html" class="link-btn">
+            Zurück zur Übersicht
+        </a>
+    </div>
+
+</body>
+</html>
